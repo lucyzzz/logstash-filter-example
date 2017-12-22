@@ -10,7 +10,7 @@ require 'yaml'
 # message field with whatever you specify in the configuration.
 #
 # It is only intended to be used as an .
-class LogStash::Filters::attackfilter < LogStash::Filters::Base
+class LogStash::Filters::Attackfilter < LogStash::Filters::Base
 
   # Setting the config_name here is required. This is how you
   # configure this filter from your Logstash config.
@@ -44,8 +44,8 @@ class LogStash::Filters::attackfilter < LogStash::Filters::Base
           #  puts "place: #{sql['place']}"
           #  puts "typename: #{sql['typename']}"
             reg3 = Regexp.new "#{sql['regex']}"[0..-1] 
-            if reg3 =~ @messages
-              ccc = "检测出存在 #{sql['typename']}  #{@messages}" 
+            if reg3 =~ @message
+              ccc = "检测出存在 #{sql['typename']}  #{@message}" 
               event.set("message", ccc)
               break
             end
