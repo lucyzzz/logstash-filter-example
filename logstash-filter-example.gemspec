@@ -1,5 +1,5 @@
 Gem::Specification.new do |s|
-  s.name = 'logstash-filter-example'
+  s.name = 'logstash-filter-attackfilter'
   s.version         = '3.0.1'
   s.licenses = ['Apache License (2.0)']
   s.summary = "This example filter replaces the contents of the message field with the specified value."

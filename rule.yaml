@@ -1,0 +1,11 @@
+data:
+   sql:
+    -  id: 1
+       regex: '.*order.*by.*'
+       place: 'message'
+       typename: 'sql注入攻击'
+    -  id: 2
+       regex: '.*order*by.*'
+       place: 'message'
+       typename: 'sql注入攻击'
+
